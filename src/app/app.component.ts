@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SplashAnimationType } from './pages/splash-screen/components/splash-animation-type';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ahmad-agha';
+  public SplashAnimationTypesEnum = SplashAnimationType
 }

@@ -3,3 +3,6 @@
     font-family: "Michroma";
     src: local("Michroma"), url(./assets/media/fonts/Michroma/Michroma-Regular.ttf) format("truetype");
 }
+body{
+    font-family: 'Michroma';
+}
