@@ -4,12 +4,13 @@ import { MainPageComponent } from './pages/main-page/components/main-page/main-p
 
 const routes: Routes = [
   {
-    path: 'main-page',
+    path: '',
     component: MainPageComponent
   },
   {
-    path: '',
-    redirectTo: 'main-page',
+    // wrong path
+    path: '**',
+    redirectTo: '',
     pathMatch: 'full'
   }
 ];
