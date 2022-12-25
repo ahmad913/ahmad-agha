@@ -1,18 +1,23 @@
-.Nav-bar {
+nav {
     width: 100%;
-    background-color: lightsteelblue;
-    list-style: none;
     display: flex;
     flex-direction: row;
     margin: 0;
     padding-inline: 0;
     justify-content: center;
+    position: -webkit-fixed;
     position: fixed;
     top: 0;
     z-index: 10;
+
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-.Nav-bar>a {
+nav>a {
     padding: 0px 30px;
     margin-left: -20px;
     user-select: none;
@@ -22,7 +27,12 @@
     position: relative;
     height: 80px;
     line-height: 80px;
-    background-color: lightsteelblue;
+
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+
     zoom: 1;
     display: inline;
     color: black;
@@ -30,25 +40,13 @@
 
 }
 
-.Nav-bar+.content {
-    padding-top: 80px;
-}
-
-.content {
-    width: 100%;
-    position: absolute;
-    background: linear-gradient(60deg, rgba(40, 164, 226, 1) 0%, rgba(230, 216, 16, 0.4) 100%);
-    background-color: rgba(40, 164, 226);
-    height: calc(100% - 80px);
-    /* */
-}
-
-.Nav-bar>a:first-child::before {
+nav>a:first-child::before {
     content: "";
     width: 21px;
     -webkit-clip-path: polygon(calc(0% + 20px) 0, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
     clip-path: polygon(calc(0% + 20px) 0, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
-    background-color: black;
+    background-color: rgba(255, 255, 255, 0.35);
+    ;
     height: 100%;
     zoom: 1;
     display: inline;
@@ -56,17 +54,45 @@
     left: 0px;
 }
 
-.Nav-bar>a::after {
+nav>a::after {
     content: "";
     width: 21px;
     -webkit-clip-path: polygon(calc(0% + 20px) 0, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
     clip-path: polygon(calc(0% + 20px) 0, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
-    background-color: black;
+    background-color: rgba(255, 255, 255, 0.35);
     height: 100%;
     zoom: 1;
     display: inline;
     position: absolute;
     right: 0px;
+}
+
+
+
+.content {
+    width: 100%;
+    background: linear-gradient(60deg, rgba(40, 164, 226, 1) 0%, rgba(230, 216, 16, 0.4) 100%);
+    background-color: rgba(40, 164, 226);
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    /* */
+}
+
+.content::after {
+    content: "أحمد";
+    position: absolute;
+    line-height: 65vh;
+    bottom: 135px;
+    right: 0;
+    z-index: 0;
+    font-size: 65vh;
+    font-family: Noto Naskh Arabic;
+    color: white;
+    opacity: 0.6;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
 }
 
 .footer {
@@ -80,15 +106,13 @@
 }
 
 .waves {
-    position: relative;
     width: 100%;
     height: 15vh;
-    margin-bottom: -7px; /*Fix for safari gap*/
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
     min-height: 100px;
     max-height: 150px;
-  }
-  
-
+}
 
 /* Animation */
 
