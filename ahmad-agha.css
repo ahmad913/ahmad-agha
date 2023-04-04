@@ -1,0 +1,152 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Michroma';
+    background: linear-gradient(60deg, rgba(40, 164, 226, 1) 0%, rgba(230, 216, 16, 0.4) 100%);
+    background-color: rgba(40, 164, 226);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    position: -webkit-fixed;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+nav>a {
+    padding: 0px 30px;
+    margin-left: -20px;
+    user-select: none;
+    cursor: pointer !important;
+    -webkit-clip-path: polygon(calc(0% + 20px) 0, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
+    clip-path: polygon(calc(0% + 20px) 0, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
+    position: relative;
+    height: 80px;
+    line-height: 80px;
+
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+
+    zoom: 1;
+    display: inline;
+    color: black;
+    text-decoration: none;
+
+}
+
+nav>a:first-child::before {
+    content: "";
+    width: 21px;
+    -webkit-clip-path: polygon(calc(0% + 20px) 0, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
+    clip-path: polygon(calc(0% + 20px) 0, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
+    background-color: rgba(255, 255, 255, 0.35);
+    ;
+    height: 100%;
+    zoom: 1;
+    display: inline;
+    position: absolute;
+    left: 0px;
+}
+
+nav>a::after {
+    content: "";
+    width: 21px;
+    -webkit-clip-path: polygon(calc(0% + 20px) 0, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
+    clip-path: polygon(calc(0% + 20px) 0, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
+    background-color: rgba(255, 255, 255, 0.35);
+    height: 100%;
+    zoom: 1;
+    display: inline;
+    position: absolute;
+    right: 0px;
+}
+
+section {
+    height: 100svh;
+    min-height: 100svh;
+    max-height: 100svh;
+}
+
+.BGText {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    line-height: 65vh;
+    font-size: 65vh;
+    font-family: Noto Naskh Arabic;
+    color: white;
+    opacity: 0.6;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+footer {
+    height: 120px;
+    width: 100%;
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(4, calc(25% - 9px));
+    grid-template-rows: repeat(2, calc(50% - 6px));
+    background-color: gray;
+}
+
+.waves {
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+}
+
+/* Animation */
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
