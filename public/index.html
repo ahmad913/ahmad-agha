@@ -6,82 +6,179 @@
 <script src="index.js"></script>
 
 <head>
-    <title>Ahmad-Agha</title>
-    <link rel="icon" type="image/x-icon" href="images/ACU.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Michroma&family=Noto+Naskh+Arabic&display=swap">
+  <title>Ahmad-Agha</title>
+  <!-- <link rel="icon" type="image/x-icon" href="images/ACU.ico"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Noto+Naskh+Arabic&display=swap">
 </head>
 
-
 <body>
-    <!-- gonna be mainly a single page app with some other detaisl pages etc. -->
+  <!-- gonna be mainly a single page app with some other detaisl pages etc. -->
+  <div class="main-container">
+
     <nav>
-        <a href="#home">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#work">Work</a>
-        <a href="#education">Education</a>
-        <a href="#updates">Updates</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About Me</a>
+      <a href="#home">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#education">Education</a>
+      <a href="#updates">Updates</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About Me</a>
     </nav>
 
-
-    <!-- section 1 -->
-    <section id="home" style="display: flex; flex-flow: column nowrap; align-items: center; justify-content: flex-end;">
-        <div class="BGText">
-            أحمد
-        </div>
-        <div
-            style="flex-grow: 1; display: flex; flex-flow: column nowrap; align-items: center; justify-content: center;">
-            <h1>
-                I'M AHMAD AGHA
-            </h1>
-            <h4>
-                Cross-platform Developer
-            </h4>
-        </div>
-        <!--Waves-->
-        <div style="width: 100%; align-self: flex-end;">
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                <defs>
-                    <path id="gentle-wave"
-                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                </defs>
-                <g class="parallax">
-                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-                    <use xlink:href="#gentle-wave" x="48" y="2" fill="rgba(255,255,255,0.5)" />
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.3)" />
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="#fff" />
-                </g>
-            </svg>
-            <div style="height: 16svh; background-color: #fff;"></div>
-        </div>
+    <section id="home"
+      style="display: flex; flex-flow: column nowrap; align-items: center; justify-content: flex-end; position: relative;">
+      <div class="BGText">
+        أحمد
+      </div>
+      <div style="flex-grow: 1; display: flex; flex-flow: column nowrap; align-items: center; justify-content: center;">
+        <h1>
+          I'M AHMAD AGHA
+        </h1>
+        <h4>
+          Cross-platform Developer
+        </h4>
+      </div>
+      <!--Waves-->
+      <div style="width: 100%; align-self: flex-end;">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+            <use xlink:href="#gentle-wave" x="48" y="2" fill="rgba(255,255,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="#fff" />
+          </g>
+        </svg>
+        <div style="height: 16svh; background-color: #fff;"></div>
+      </div>
     </section>
 
-    <!-- section 2 -->
-    <section id="skills" style="width: 100%; background-color: #fff; text-align: center; font-size: 20px; display: flex;
-            flex-direction: column; justify-content: center;">
+    <section id="skills">
 
-        <!-- <style style="display: block; white-space: pre;" contenteditable></style> -->
-        <h1>Skills</h1>
-        <div class="card">
-            <div class="card-title"></div>
-            <img class="card-image" />
-            <div class="card-description"></div>
-        </div>
+      <!-- <style style="display: block; white-space: pre;" contenteditable></style> -->
+      <h1 style="width: 100%;">Skills</h1>
 
-        <!-- personal interests -->
-        <!-- partners -->
-        <!-- resources or tips & tricks -->
-        <!-- credentials -->
+      <div class="skill-card" onclick="ToggleActive(this)">
+        <img src="images/logos/csharp.svg" alt="C# Logo" />
+        <h3><b>C#</b></h3>
+        <h6 style="display: none;">worked with a variety of different & complicated systems.</h6>
+      </div>
+
+      <div class="skill-card" onclick="ToggleActive(this)">
+        <img src="images/logos/xamarin.svg" alt="Xamarin Logo" />
+        <h3><b>Xamarin</b></h3>
+        <h6 style="display: none;">my very first steps into the programming world were possible thanks to C# & Xamarin.
+        </h6>
+      </div>
+
+      <div class="skill-card" onclick="ToggleActive(this)">
+        <img src="images/logos/blazor.svg" alt="Blazor Logo" />
+        <h3><b>Blazor</b></h3>
+        <h6 style="display: none;">biggest project worked on is a POS system made with Blazor.</h6>
+      </div>
+
+
+      <div class="skill-card" onclick="ToggleActive(this)">
+        <img src="images/logos/html-1.svg" alt="Html Logo" />
+        <h3><b>HTML</b></h3>
+        <h6 style="display: none;">work with html on more than a daily basis.</h6>
+      </div>
+
+      <div class="skill-card" onclick="ToggleActive(this)">
+        <img src="images/logos/css-3.svg" alt="Css Logo" />
+        <h3><b>CSS</b></h3>
+        <h6 style="display: none;">worked closely to craft amazing css files to style different purpose pages.</h6>
+      </div>
+
+      <div class="skill-card" onclick="ToggleActive(this)">
+        <img src="images/logos/logo-javascript.svg" alt="JavaScript Logo" />
+        <h3><b>JavaScript</b></h3>
+        <h6 style="display: none;">worked with wide range of JavaScript events & functions.</h6>
+      </div>
+
+      <div class="skill-card" onclick="ToggleActive(this)">
+        <img src="images/logos/typescript.svg" alt="TypeScript Logo" />
+        <h3><b>TypeScript</b></h3>
+        <h6 style="display: none;">constructed and refactored data heavy related TypeScript code.</h6>
+      </div>
+
+      <div class="skill-card" onclick="ToggleActive(this)">
+        <img src="images/logos/angular-icon-1.svg" alt="Angular Logo" />
+        <h3><b>Angular</b></h3>
+        <h6 style="display: none;">worked with mutiple trading related Angular projects.</h6>
+      </div>
+
+      <div class="skill-card" onclick="ToggleActive(this)">
+        <img src="images/logos/git-icon.svg" alt="Git Logo" />
+        <h3><b>Git</b></h3>
+        <h6 style="display: none;">faimliar with Git commands and system.</h6>
+      </div>
+
+      <div class="skill-card" onclick="ToggleActive(this)">
+        <img src="images/logos/jira-3.svg" alt="Jira Logo" />
+        <h3><b>Jira</b></h3>
+        <h6 style="display: none;">faimliar with the Jira work enviorment and flow.</h6>
+      </div>
+
+      <div class="skill-card" onclick="ToggleActive(this)">
+        <img src="images/logos/bitbucket-icon.svg" alt="BitBucket Logo" />
+        <h3><b>BitBucket</b></h3>
+        <h6 style="display: none;">faimliar with the BitBucket version control system.</h6>
+      </div>
 
     </section>
 
-    <footer>
-    </footer>
+    <section id="work">
+      <h2>Work</h2>
+      <h3>Project 1</h3>
+      <p>Brief description of project 1</p>
+      <h3>Project 2</h3>
+      <p>Brief description of project 2</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <h3>Degree 1</h3>
+      <p>Brief description of degree 1</p>
+      <h3>Degree 2</h3>
+      <p>Brief description of degree 2</p>
+    </section>
+
+    <section id="updates">
+      <h2>Updates</h2>
+      <h3>Post 1</h3>
+      <p>Brief description of post 1</p>
+      <h3>Post 2</h3>
+      <p>Brief description of post 2</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: yourname@email.com</p>
+      <p>Phone: 555-555-5555</p>
+      <p>Social media:</p>
+      <ul>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">GitHub</a></li>
+      </ul>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Write a little bit about yourself and your interests.</p>
+      <footer style="color: #fff;">
+        <p>©2023 Ahmad Agha.</p>
+      </footer>
+    </section>
+
+  </div>
+
 </body>
 
 </html>
