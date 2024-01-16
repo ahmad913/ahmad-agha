@@ -32,7 +32,7 @@
       <div class="BGText">
         أحمد
       </div>
-      <div style="flex-grow: 1; display: flex; flex-flow: column nowrap; align-items: center; justify-content: center;">
+      <div style="flex-grow: 1; display: flex; flex-flow: column nowrap; align-items: center; justify-content: center; color: white;">
         <h1>
           I'M AHMAD AGHA
         </h1>
@@ -48,19 +48,23 @@
             <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
           </defs>
           <g class="parallax">
-            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-            <use xlink:href="#gentle-wave" x="48" y="2" fill="rgba(255,255,255,0.5)" />
-            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.3)" />
-            <use xlink:href="#gentle-wave" x="48" y="5" fill="#fff" />
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255, 204, 102,0.7)" />
+            <use xlink:href="#gentle-wave" x="48" y="2" fill="rgba(255, 204, 102,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255, 204, 102,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="#ffcc66" />
           </g>
         </svg>
-        <div style="height: 16svh; background-color: #fff;"></div>
+        <div style="height: 16svh; background-color: #ffcc66;"></div>
       </div>
     </section>
 
     <section id="skills">
+      <div class="neon-container">
+        <div class="neon billboard" id="skillDisplay">C#</div>
+        <div class="neon neon-card" onclick="nextSkill()">&#8652;</div>
+      </div>
+      <!--
 
-      <!-- <style style="display: block; white-space: pre;" contenteditable></style> -->
       <h1 style="width: 100%;">Skills</h1>
 
       <div class="skill-card" onclick="ToggleActive(this)">
@@ -131,17 +135,21 @@
         <h6 style="display: none;">faimliar with the BitBucket version control system.</h6>
       </div>
 
+    
+
+      -->
     </section>
 
     <section id="work">
-      <h2>Work</h2>
+      <div class="square-div"></div>
+      <!-- <h2>Work</h2>
       <h3>Project 1</h3>
       <p>Brief description of project 1</p>
       <h3>Project 2</h3>
-      <p>Brief description of project 2</p>
+      <p>Brief description of project 2</p> -->
     </section>
 
-     <!-- <section id="education">
+    <!-- <section id="education">
       <h2>Education</h2>
       <h3>Degree 1</h3>
       <p>Brief description of degree 1</p>
